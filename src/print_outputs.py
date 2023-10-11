@@ -13,7 +13,7 @@ class colors:
     ENDC = '\033[0m'
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
-
+    
 def now():
     return datetime.datetime.now().strftime("%H:%M:%S")
 
@@ -28,3 +28,6 @@ def print_debugging(*args, **kwargs):
     
 def print_info(*args, **kwargs):
     print(now()+" ["+colors.BOLD+colors.OKGREEN+"INFO"+colors.ENDC+"] "+" ".join(map(str,args))+"\n", **kwargs)
+
+def print_configs(*args, **kwargs):
+    print(now()+" ["+colors.BOLD+colors.OKBLUE+"CONFIGS"+colors.ENDC+"] "+" ".join(map(str,args))+"\n", **kwargs)
